@@ -1,6 +1,8 @@
 # itopplus
  For Test
 
-npm i
+npm i 
+
 npx nx serve express-api
+
 npx nx serve angular 
