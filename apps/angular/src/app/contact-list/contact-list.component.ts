@@ -14,7 +14,9 @@ export class ContactListComponent implements OnInit {
   p: any;
   Contacts: any = []
 
-  constructor(private crudService: CrudService) { }
+  constructor(
+    private crudService: CrudService,
+  ) { }
 
   ngOnInit(): void {
     this.crudService.getContacts().subscribe(res => {
@@ -25,7 +27,8 @@ export class ContactListComponent implements OnInit {
   delete(id: any, i: any) {
     if (window.confirm('Do you want to delete?')) {
       this.crudService.deleteContact(id).subscribe((res) => {
-        this.Contacts.splice(i, 1);
+        this.ngOnInit()
+        // this.Contacts.splice(i, 1);
       })
     }
 
