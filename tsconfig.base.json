@@ -1,0 +1,25 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@itopplus/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@itopplus/data-helper": ["libs/data-helper/src/index.ts"],
+      "@itopplus/database": ["libs/database/src/index.ts"],
+      "@itopplus/helper": ["libs/helper/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
