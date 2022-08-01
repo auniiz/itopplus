@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../service/crud.service';
+import { PaginationInstance } from 'ngx-pagination';
+
 @Component({
   selector: 'itopplus-contact-list',
   templateUrl: './contact-list.component.html',
   styleUrls: ['./contact-list.component.css'],
 })
-export class ContactListComponent implements OnInit {
 
+
+
+export class ContactListComponent implements OnInit {
+  p: any;
   Contacts: any = []
 
   constructor(private crudService: CrudService) { }
@@ -25,5 +30,7 @@ export class ContactListComponent implements OnInit {
     }
 
   }
+
+
 
 }

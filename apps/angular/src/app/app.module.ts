@@ -13,6 +13,8 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactAddComponent } from './contact-add/contact-add.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
 const appRoutes: Routes = [
   { path: 'add', component: ContactAddComponent },
   { path: 'detail/:id', component: ContactDetailComponent },
@@ -34,6 +36,7 @@ const appRoutes: Routes = [
     ContactDetailComponent,
   ],
   imports: [
+    NgxPaginationModule,
     RouterModule,
     BrowserModule,
     FormsModule,

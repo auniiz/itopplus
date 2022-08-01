@@ -6,6 +6,8 @@
    </div>
 
    <div class="table-responsive">
+     
+     
       <table class="table table-bordered">
          <thead>
             <tr>
@@ -18,7 +20,7 @@
             </tr>
          </thead>
          <tbody>
-            <tr *ngFor="let contact of Contacts; let i = index">
+            <tr *ngFor="let contact of Contacts| paginate:{itemsPerPage: 5, currentPage: p} ; let i = index">
                <!-- <th scope="row">{{contact._id}}</th> -->
                <td>{{contact.name}}</td>
                <td>{{contact.address}}</td>
@@ -31,5 +33,6 @@
             </tr>
          </tbody>
       </table>
+      <div class="col-12 col-center"> <pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls></div>
    </div>
 </div>
